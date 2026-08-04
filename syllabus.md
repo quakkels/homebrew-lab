@@ -1,4 +1,4 @@
-# The Shack — An Electronics Curriculum
+# Homebrew Lab — An Electronics Curriculum
 
 A self-directed, bench-driven course in electronics, built around one idea:
 **you learn analog by *seeing* it on a scope.** Every experiment ends with a
