@@ -1,7 +1,7 @@
 # Project — QMX+ Homebrew Radio
 
-**Status:** Planned
-**Branches off:** Module 6 ([12 — LC Filters & Impedance Matching](../../experiments/12-lc-filters-and-impedance-matching.md), [13 — Mixers & Detectors](../../experiments/13-mixers-and-detectors.md)).
+- **Status:** Planned
+- **Branches off:** Module 6 ([12 — LC Filters & Impedance Matching](../../experiments/12-lc-filters-and-impedance-matching.md), [13 — Mixers & Detectors](../../experiments/13-mixers-and-detectors.md)).
 
 ## Goal
 

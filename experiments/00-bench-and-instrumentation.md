@@ -1,9 +1,9 @@
 # 00 — Bench & Instrumentation
 
-**Module:** 0 — The Bench
-**Status:** Ready
-**Prerequisites:** none
-**Est. time:** 1–2 hours (plus an ordering break for the parts kit)
+- **Module:** 0 — The Bench
+- **Status:** Ready
+- **Prerequisites:** none
+- **Est. time:** 1–2 hours (plus an ordering break for the parts kit)
 
 ## Objective
 
@@ -70,7 +70,7 @@ You can buy these as a bundle or individually. Quantities are "enough to play."
 | Trimmer pot | 10 k | Biasing, adjustable dividers |
 | Misc | breadboard jumper kit, 9 V battery + clip, alligator leads | Wiring |
 
-**Later, for the RF modules and QMX+ work:** a NanoVNA, a small assortment of
+- **Later, for the RF modules and QMX+ work:** a NanoVNA, a small assortment of
 toroid cores (T37-2, T37-6, FT37-43), enameled wire, and some crystals.
 
 ## The "aha"

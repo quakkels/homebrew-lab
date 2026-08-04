@@ -1,9 +1,9 @@
 # 03 — Inductors & LC Resonance
 
-**Module:** 1 — Passives & Time
-**Status:** Planned
-**Prerequisites:** [02 — RC Filters](02-rc-filters.md)
-**Est. time:** ~90 min
+- **Module:** 1 — Passives & Time
+- **Status:** Planned
+- **Prerequisites:** [02 — RC Filters](02-rc-filters.md)
+- **Est. time:** ~90 min
 
 ## Objective
 

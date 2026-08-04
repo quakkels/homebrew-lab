@@ -1,9 +1,9 @@
 # 12 — LC Filters & Impedance Matching
 
-**Module:** 6 — RF Fundamentals
-**Status:** Planned
-**Prerequisites:** [03 — Inductors & LC Resonance](03-inductors-and-lc-resonance.md), [02 — RC Filters](02-rc-filters.md)
-**Est. time:** ~2–3 hours
+- **Module:** 6 — RF Fundamentals
+- **Status:** Planned
+- **Prerequisites:** [03 — Inductors & LC Resonance](03-inductors-and-lc-resonance.md), [02 — RC Filters](02-rc-filters.md)
+- **Est. time:** ~2–3 hours
 
 ## Objective
 

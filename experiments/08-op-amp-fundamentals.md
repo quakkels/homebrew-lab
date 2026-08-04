@@ -1,9 +1,9 @@
 # 08 — Op-Amp Fundamentals
 
-**Module:** 4 — Op-Amps
-**Status:** Planned
-**Prerequisites:** [07 — Transistor as an Amplifier](07-transistor-as-amplifier.md)
-**Est. time:** ~90 min
+- **Module:** 4 — Op-Amps
+- **Status:** Planned
+- **Prerequisites:** [07 — Transistor as an Amplifier](07-transistor-as-amplifier.md)
+- **Est. time:** ~90 min
 
 ## Objective
 

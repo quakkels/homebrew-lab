@@ -1,9 +1,9 @@
 # 05 — A Linear Power Supply
 
-**Module:** 2 — Diodes & Power
-**Status:** Planned
-**Prerequisites:** [04 — Diodes & Rectification](04-diodes-and-rectification.md)
-**Est. time:** ~90 min
+- **Module:** 2 — Diodes & Power
+- **Status:** Planned
+- **Prerequisites:** [04 — Diodes & Rectification](04-diodes-and-rectification.md)
+- **Est. time:** ~90 min
 
 ## Objective
 

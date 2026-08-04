@@ -1,9 +1,9 @@
 # 01 — The RC Time Constant
 
-**Module:** 1 — Passives & Time
-**Status:** Ready
-**Prerequisites:** [00 — Bench & Instrumentation](00-bench-and-instrumentation.md)
-**Est. time:** 45–60 min
+- **Module:** 1 — Passives & Time
+- **Status:** Ready
+- **Prerequisites:** [00 — Bench & Instrumentation](00-bench-and-instrumentation.md)
+- **Est. time:** 45–60 min
 
 ## Objective
 

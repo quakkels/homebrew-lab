@@ -1,9 +1,9 @@
 # 07 — Transistor as an Amplifier
 
-**Module:** 3 — Transistors
-**Status:** Planned
-**Prerequisites:** [06 — Transistor as a Switch](06-transistor-as-switch.md)
-**Est. time:** ~2 hours
+- **Module:** 3 — Transistors
+- **Status:** Planned
+- **Prerequisites:** [06 — Transistor as a Switch](06-transistor-as-switch.md)
+- **Est. time:** ~2 hours
 
 ## Objective
 

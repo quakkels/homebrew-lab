@@ -1,9 +1,9 @@
 # 09 — Active Filters
 
-**Module:** 4 — Op-Amps
-**Status:** Planned
-**Prerequisites:** [08 — Op-Amp Fundamentals](08-op-amp-fundamentals.md), [02 — RC Filters](02-rc-filters.md)
-**Est. time:** ~2 hours
+- **Module:** 4 — Op-Amps
+- **Status:** Planned
+- **Prerequisites:** [08 — Op-Amp Fundamentals](08-op-amp-fundamentals.md), [02 — RC Filters](02-rc-filters.md)
+- **Est. time:** ~2 hours
 
 ## Objective
 

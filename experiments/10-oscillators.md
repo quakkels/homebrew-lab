@@ -1,9 +1,9 @@
 # 10 — Oscillators (555 & RC)
 
-**Module:** 5 — Oscillators & Signals
-**Status:** Planned
-**Prerequisites:** [08 — Op-Amp Fundamentals](08-op-amp-fundamentals.md)
-**Est. time:** ~90 min
+- **Module:** 5 — Oscillators & Signals
+- **Status:** Planned
+- **Prerequisites:** [08 — Op-Amp Fundamentals](08-op-amp-fundamentals.md)
+- **Est. time:** ~90 min
 
 ## Objective
 

@@ -1,9 +1,9 @@
 # 02 — RC Filters (low-pass & high-pass)
 
-**Module:** 1 — Passives & Time
-**Status:** Ready
-**Prerequisites:** [01 — The RC Time Constant](01-rc-time-constant.md)
-**Est. time:** 60 min
+- **Module:** 1 — Passives & Time
+- **Status:** Ready
+- **Prerequisites:** [01 — The RC Time Constant](01-rc-time-constant.md)
+- **Est. time:** 60 min
 
 ## Objective
 

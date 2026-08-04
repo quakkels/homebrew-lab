@@ -1,7 +1,7 @@
 # Project — Keyboard From Scratch
 
-**Status:** Planned
-**Branches off:** Module 7 ([14 — Digital Logic & Microcontrollers](../../experiments/14-digital-logic-and-microcontrollers.md)), using diode/switch intuition from Modules 1–3.
+- **Status:** Planned
+- **Branches off:** Module 7 ([14 — Digital Logic & Microcontrollers](../../experiments/14-digital-logic-and-microcontrollers.md)), using diode/switch intuition from Modules 1–3.
 
 ## Goal
 

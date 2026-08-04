@@ -1,9 +1,9 @@
 # 13 — Mixers & Detectors
 
-**Module:** 6 — RF Fundamentals
-**Status:** Planned
-**Prerequisites:** [12 — LC Filters & Impedance Matching](12-lc-filters-and-impedance-matching.md), [11 — Crystal Oscillator](11-crystal-oscillator.md)
-**Est. time:** ~2–3 hours
+- **Module:** 6 — RF Fundamentals
+- **Status:** Planned
+- **Prerequisites:** [12 — LC Filters & Impedance Matching](12-lc-filters-and-impedance-matching.md), [11 — Crystal Oscillator](11-crystal-oscillator.md)
+- **Est. time:** ~2–3 hours
 
 ## Objective
 

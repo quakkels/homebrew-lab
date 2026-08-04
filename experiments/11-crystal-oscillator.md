@@ -1,9 +1,9 @@
 # 11 — Crystal Oscillator
 
-**Module:** 5 — Oscillators & Signals
-**Status:** Planned
-**Prerequisites:** [10 — Oscillators (555 & RC)](10-oscillators.md), [03 — Inductors & LC Resonance](03-inductors-and-lc-resonance.md)
-**Est. time:** ~90 min
+- **Module:** 5 — Oscillators & Signals
+- **Status:** Planned
+- **Prerequisites:** [10 — Oscillators (555 & RC)](10-oscillators.md), [03 — Inductors & LC Resonance](03-inductors-and-lc-resonance.md)
+- **Est. time:** ~90 min
 
 ## Objective
 

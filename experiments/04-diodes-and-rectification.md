@@ -1,9 +1,9 @@
 # 04 — Diodes & Rectification
 
-**Module:** 2 — Diodes & Power
-**Status:** Planned
-**Prerequisites:** [02 — RC Filters](02-rc-filters.md)
-**Est. time:** ~60 min
+- **Module:** 2 — Diodes & Power
+- **Status:** Planned
+- **Prerequisites:** [02 — RC Filters](02-rc-filters.md)
+- **Est. time:** ~60 min
 
 ## Objective
 

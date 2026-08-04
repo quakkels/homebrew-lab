@@ -1,9 +1,9 @@
 # 06 — Transistor as a Switch
 
-**Module:** 3 — Transistors
-**Status:** Planned
-**Prerequisites:** [04 — Diodes & Rectification](04-diodes-and-rectification.md)
-**Est. time:** ~75 min
+- **Module:** 3 — Transistors
+- **Status:** Planned
+- **Prerequisites:** [04 — Diodes & Rectification](04-diodes-and-rectification.md)
+- **Est. time:** ~75 min
 
 ## Objective
 

@@ -1,9 +1,9 @@
 # 14 — Digital Logic & Microcontrollers
 
-**Module:** 7 — Digital & Embedded
-**Status:** Planned
-**Prerequisites:** [06 — Transistor as a Switch](06-transistor-as-switch.md)
-**Est. time:** ~2–3 hours (spread over sessions)
+- **Module:** 7 — Digital & Embedded
+- **Status:** Planned
+- **Prerequisites:** [06 — Transistor as a Switch](06-transistor-as-switch.md)
+- **Est. time:** ~2–3 hours (spread over sessions)
 
 ## Objective
 
