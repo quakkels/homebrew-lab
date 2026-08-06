@@ -1,19 +1,14 @@
 # Project — QMX+ Homebrew Radio
 
-- **Status:** Planned
 - **Branches off:** Module 6 ([12 — LC Filters & Impedance Matching](../../experiments/12-lc-filters-and-impedance-matching.md), [13 — Mixers & Detectors](../../experiments/13-mixers-and-detectors.md)).
 
 ## Goal
 
-Build, align, and — most importantly — **understand** the **QRP Labs QMX+**.
-Not just "follow the manual and hope it works," but trace every
-block to the fundamentals you built up in the course, so you can test, debug, and
-eventually modify it.
+Build, align, and — most importantly — **understand** the **QRP Labs QMX+**. Not just "follow the manual and hope it works," but trace every block to the fundamentals you built up in the course, so you can test, debug, and eventually modify it.
 
 ## What the QMX+ is (and why it's a great teacher)
 
-The QMX+ is a multiband CW/digital + SSB QRP transceiver built on an **SDR**
-architecture. Its major blocks map cleanly onto this curriculum:
+The QMX+ is a multiband CW/digital + SSB QRP transceiver built on an **SDR** architecture. Its major blocks map cleanly onto this curriculum:
 
 | QMX+ block | Course grounding |
 |---|---|
@@ -26,8 +21,7 @@ architecture. Its major blocks map cleanly onto this curriculum:
 | Class-D/E power amplifier | Exp. 06 — switching, and Exp. 12 — matching |
 | Power/regulation | Module 2 — power supply |
 
-That table *is* the point of the RF modules: by the time you get here, none of
-these blocks is a black box.
+That table *is* the point of the RF modules: by the time you get here, none of these blocks is a black box.
 
 ## Phased plan
 
@@ -38,28 +32,23 @@ these blocks is a black box.
 
 ### Phase 1 — Understand before you build
 - With the schematic open, label each block using the table above.
-- For each stage, note "what would I measure here, and what should I see?" — this
-  becomes your test plan.
+- For each stage, note "what would I measure here, and what should I see?" — this becomes your test plan.
 
 ### Phase 2 — Build
-- Follow the manual carefully; **winding toroids accurately** is the make-or-break
-  skill (practiced in Exp. 03 and 12). Count turns, keep tension even.
+- Follow the manual carefully; **winding toroids accurately** is the make-or-break skill (practiced in Exp. 03 and 12). Count turns, keep tension even.
 - Work in the manual's recommended stages; don't rush the magnetics.
 
 ### Phase 3 — Test & align
-- Use the built-in test/diagnostic modes; a scope and (ideally) a NanoVNA to
-  check filters; a dummy load for any TX testing.
+- Use the built-in test/diagnostic modes; a scope and (ideally) a NanoVNA to check filters; a dummy load for any TX testing.
 - Align per the manual; record measured filter responses and power output.
-- **Transmit only into a dummy load / proper antenna, on bands your license
-  authorizes, at legal power** — you're a General, so operate within your privileges.
+- **Transmit only into a dummy load / proper antenna, on bands your license authorizes, at legal power** — you're a General, so operate within your privileges.
 
 ### Phase 4 — Operate & understand
 - Make contacts; correlate what you hear with the block diagram.
 - Revisit any block that's fuzzy and do the matching bench experiment.
 
 ### Phase 5 — Modify / extend (stretch)
-- Scratch-build an experimental stage (e.g. an outboard band-pass filter or a
-  receive preamp) using Module 6 skills, and compare it to the QMX+'s own.
+- Scratch-build an experimental stage (e.g. an outboard band-pass filter or a receive preamp) using Module 6 skills, and compare it to the QMX+'s own.
 
 ## Skills / prerequisites checklist
 
@@ -73,19 +62,17 @@ these blocks is a black box.
 
 ## Tools & materials
 
-The QMX+ kit, fine soldering gear, enameled wire for toroids, a dummy
-load, scope, and ideally a NanoVNA for filter alignment.
+The QMX+ kit, fine soldering gear, enameled wire for toroids, a dummy load, scope, and ideally a NanoVNA for filter alignment.
 
 ## Safety & regulatory notes
 
-- Transmit into a dummy load during testing; only radiate on authorized
-  frequencies within your **US General** privileges and legal power limits.
+- Transmit into a dummy load during testing; only radiate on authorized frequencies within your **US General** privileges and legal power limits.
 - Observe ESD precautions with the STM32 and PA MOSFETs.
 - Mind heat on the PA during any extended TX testing.
 
 ## Log / decisions
 
-- Build progress by stage: 
-- Measured filter responses / power output: 
-- Alignment notes: 
-- Mods attempted: 
+- Build progress by stage:
+- Measured filter responses / power output:
+- Alignment notes:
+- Mods attempted:
