@@ -52,6 +52,18 @@ The diagrams are drawn with plain text characters. Here is what each one means:
 
 So `10 nF` = 10 nanofarads, `4.7 kΩ` = 4,700 ohms, `1 mH` = 0.001 henry, `50 MHz` = 50,000,000 hertz.
 
+**The same value written every way (worked example).** Here is one single capacitance — 4.7 microfarads — written with each prefix. Every row is the *exact same amount of capacitance*; only the prefix and the position of the decimal point change:
+
+| Prefix | This capacitor, written that way |
+|---|---|
+| pico (pF) | 4,700,000 pF |
+| nano (nF) | 4,700 nF |
+| micro (µF) | **4.7 µF** ← the natural way to write it |
+| milli (mF) | 0.0047 mF |
+| (none) | 0.0000047 F |
+
+Each step down the list (pico → nano → micro → milli → farad) multiplies by 1,000, so the decimal point jumps three places each time. The same rule runs the other way for *large* quantities — for a frequency, `3,500,000 Hz` = `3,500 kHz` = `3.5 MHz`; for a resistance, `4,700 Ω` = `4.7 kΩ` = `0.0047 MΩ`. Pick whichever prefix keeps the number conveniently sized (that's why a cap is called "4.7 µF," not "0.0000047 F").
+
 **Letters used in equations:**
 
 - **τ (tau)** — time constant (how fast an RC or RL circuit responds), in seconds.
