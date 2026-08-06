@@ -4,6 +4,8 @@
 - **Prerequisites:** [10 — Oscillators (555 & RC)](10-oscillators.md), [03 — Inductors & LC Resonance](03-inductors-and-lc-resonance.md)
 - **Est. time:** ~90 min
 
+> **New to any symbol or term?** The wiring-diagram symbols, the unit abbreviations, and every piece of jargon used here are defined in the [glossary](../glossary.md) — no prior electronics knowledge assumed.
+
 ## Objective
 
 Build an oscillator whose frequency is set by a **quartz crystal**, confirm it on the scope, and prove — by warming it and by "pulling" it — why a crystal holds a frequency that an RC or LC oscillator never could. This is the bridge to how a radio knows exactly what frequency it's on.

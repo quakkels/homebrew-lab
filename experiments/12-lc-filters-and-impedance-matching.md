@@ -4,6 +4,8 @@
 - **Prerequisites:** [03 — Inductors & LC Resonance](03-inductors-and-lc-resonance.md), [02 — RC Filters](02-rc-filters.md)
 - **Est. time:** ~2–3 hours
 
+> **New to any symbol or term?** The wiring-diagram symbols, the unit abbreviations, and every piece of jargon used here are defined in the [glossary](../glossary.md) — no prior electronics knowledge assumed.
+
 ## Objective
 
 Build the real filters radios use — a sharp **LC low-pass** (a transmitter harmonic filter) and an **LC band-pass** (a receiver front end) — wind your own toroids for them, and measure their response. Then build an **L-network** impedance match and watch a mismatch turn into a match. This maps directly onto the QMX+'s filter banks and finally makes SWR mechanical.
@@ -33,6 +35,8 @@ At RF, two ideas dominate that you can now build on top of everything so far: **
 L ≈ 50 / (2π f_c)          C ≈ 1 / (2π f_c · 50)
 ```
 
+where **L** = each inductor value (henries, H); **C** = each capacitor value (farads, F); **f_c** = the filter's cutoff frequency (Hz); **50** = the system impedance, 50 ohms (Ω); **π** ≈ 3.14159.
+
 For a 40 m transmitter (7 MHz) you'd set `f_c ≈ 10 MHz`, giving Ls around **0.8 µH** (≈17 turns on a T37-2) and Cs around **330 pF** — then tune from there.
 
 **Impedance and why 50 Ω.** Every RF stage has a characteristic impedance, and **maximum power transfers when source and load impedances match**. Mismatch and some power reflects back instead of moving forward — that reflection *is* SWR. The whole radio world standardized on **50 Ω** as a good compromise between low loss and power handling, which is why your coax, your rigs, and your antennas are all "50 Ω."
@@ -43,7 +47,7 @@ For a 40 m transmitter (7 MHz) you'd set `f_c ≈ 10 MHz`, giving Ls around **0.
 
 ### Part A — Wind the inductors
 
-1. Wind a toroid for your low-pass. For ~0.8 µH on a **T37-2** (`A_L ≈ 4 nH/turn²`): `turns ≈ √(L / A_L) = √(800 nH / 4 nH) ≈ 14–17 turns`. Space the turns evenly around ~⅔ of the core. Scrape and tin the enamel off the ends.
+1. Wind a toroid for your low-pass. For ~0.8 µH on a **T37-2** (`A_L ≈ 4 nH/turn²`): `turns ≈ √(L / A_L) = √(800 nH / 4 nH) ≈ 14–17 turns` — where **A_L** is the core's "inductance factor" (the inductance a single turn gives; total inductance grows with the *square* of the number of turns) and **L** is the inductance you want. Space the turns evenly around ~⅔ of the core. Scrape and tin the enamel off the ends.
 2. **Measure it.** On the NanoVNA (or by ringing it against a known cap as in Exp. 03) confirm the inductance is in the ballpark. Adjusting turns is how you trim — this is the toroid-winding skill the QMX+ build will lean on hard.
 
 ### Part B — Build and sweep the low-pass

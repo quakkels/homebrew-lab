@@ -4,6 +4,8 @@
 - **Prerequisites:** [12 — LC Filters & Impedance Matching](12-lc-filters-and-impedance-matching.md), [11 — Crystal Oscillator](11-crystal-oscillator.md)
 - **Est. time:** ~2–3 hours
 
+> **New to any symbol or term?** The wiring-diagram symbols, the unit abbreviations, and every piece of jargon used here are defined in the [glossary](../glossary.md) — no prior electronics knowledge assumed.
+
 ## Objective
 
 Build the two operations at the heart of every radio: **detection** (recovering audio from a carrier) and **mixing** (shifting a signal to a new frequency). Hear a station on a crystal-set detector you built, watch a mixer produce sum and difference frequencies, and then read the QMX+'s quadrature receiver as something you understand.
@@ -34,6 +36,8 @@ A radio has to do two things a wire alone can't: **get the information back out 
 cos(A) · cos(B) = ½[cos(A−B) + cos(A+B)]
 ```
 
+where **cos** = the cosine function (the shape of a pure wave); **A** and **B** stand for the two input frequencies. The point is the right-hand side: multiplying two waves produces their **difference** (A−B) and **sum** (A+B) frequencies. Just below, **f_RF** = the received radio frequency and **f_LO** = the local-oscillator frequency (both in Hz).
+
 Feed a received signal at `f_RF` and a local oscillator at `f_LO` into a mixer and you get `f_RF − f_LO` and `f_RF + f_LO`. Pick off the **difference** and you've slid a station down to a low, easy-to-process frequency. Do it once to a fixed intermediate frequency and you have the **superheterodyne** receiver behind almost every radio since the 1930s. Shift it all the way down to *audio* (LO = signal frequency) and you have a **direct-conversion** receiver.
 
 **I/Q and the QSD.** A single mixer can't tell a signal *above* the LO from one an equal distance *below* it — the dreaded **image**. The fix is to mix with **two** LO copies 90° apart, producing two outputs called **I** and **Q**. From I and Q, math (analog or, in an SDR, software) can separate the two sides and demodulate any mode. The **quadrature sampling detector** — a set of analog switches clocked by the LO at 0°/90°/180°/270°, dumping into capacitors and op-amps — is the elegant, cheap way to get I and Q, and it is exactly the QMX+'s front end.
@@ -52,6 +56,8 @@ Feed a received signal at `f_RF` and a local oscillator at `f_LO` into a mixer a
                          │
                         GND
    ```
+
+   *Diagram key:* `ANT` = antenna; `[ L ]` = the tuning inductor (with the tuning capacitor it picks out one station); `──►|──`/`diode` = the detector diode; `[10nF]` = capacitor; `earpiece` = a high-impedance crystal earphone; `GND` = ground. Symbols: [glossary](../glossary.md).
 
 3. Adjust the tuning. With a decent antenna you'll **hear a station** — audio pulled from the air with no power source. Detection, made real.
 

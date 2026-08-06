@@ -2,6 +2,8 @@
 
 - **Branches off:** Module 7 ([14 — Digital Logic & Microcontrollers](../../experiments/14-digital-logic-and-microcontrollers.md)), using diode/switch intuition from Modules 1–3.
 
+> **New to any symbol or term?** Every abbreviation and piece of jargon is defined in the [glossary](../../glossary.md).
+
 ## Goal
 
 Design and build a mechanical keyboard **from scratch** — not a kit. Own the schematic, the PCB, the firmware, and the assembly. This plays directly to your software strengths while forcing you to make real hardware decisions.

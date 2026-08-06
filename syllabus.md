@@ -25,6 +25,7 @@ Each experiment follows the same loop:
 
 You build the circuit, observe it on the scope, I explain what you saw and why, and you record your measurements in the **Log** section of that experiment's file. The log is the point — it's your evidence that the theory is real, and a notebook you'll refer back to.
 
+- The **[glossary](glossary.md)** defines every symbol, unit, abbreviation, and jargon term, and explains how to read the wiring diagrams — keep it open if anything is unfamiliar (no prior electronics knowledge assumed).
 - Every experiment file is a complete lesson: objective, the *why*, a step-by-step procedure with wiring diagrams, what to look for, the "aha," and a Log to fill in.
 - Do experiments roughly in order — later ones assume the intuition from earlier ones. The two project tracks branch off once their prerequisites are met.
 

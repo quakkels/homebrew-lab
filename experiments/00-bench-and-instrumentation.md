@@ -4,6 +4,8 @@
 - **Prerequisites:** none
 - **Est. time:** 1–2 hours (plus an ordering break for the parts kit)
 
+> **New to any symbol or term?** The wiring-diagram symbols, the unit abbreviations, and every piece of jargon used here are defined in the [glossary](../glossary.md) — no prior electronics knowledge assumed.
+
 ## Objective
 
 Get the workspace and instruments ready to *learn* — not just to build. By the end you can produce a known test signal, measure it accurately, and trust your numbers. Most of this course lives or dies on trusting the scope.

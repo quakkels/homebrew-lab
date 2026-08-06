@@ -4,6 +4,8 @@
 - **Prerequisites:** [01 — The RC Time Constant](01-rc-time-constant.md)
 - **Est. time:** 60 min
 
+> **New to any symbol or term?** The wiring-diagram symbols, the unit abbreviations, and every piece of jargon used here are defined in the [glossary](../glossary.md) — no prior electronics knowledge assumed.
+
 ## Objective
 
 Take the *exact same* RC circuit from Experiment 01 and view it in the **frequency domain**: as you change the input frequency, watch some frequencies pass and others get attenuated. Measure the **cutoff frequency** and connect it to τ. This is the conceptual root of every filter you'll ever build — including the QMX+'s band-pass and low-pass filters.
@@ -28,6 +30,8 @@ From Experiment 01, `τ = RC = 100 µs`. The cutoff is:
 ```
 f_c = 1 / (2π × τ) = 1 / (2π × 100 µs) ≈ 1592 Hz
 ```
+
+where **f_c** = the cutoff frequency, in hertz (Hz); **π** = the constant ≈ 3.14159; **τ (tau)** = the RC time constant from Exp. 01 (here 100 µs). In words: a 100-microsecond time constant is the same thing as a ~1.6 kHz cutoff.
 
 Below `f_c` the capacitor looks like a high impedance and the low-pass output follows the input. Above `f_c`, `Xc` drops, the divider attenuates, and the output falls at ~20 dB/decade (÷10 in amplitude per ×10 in frequency).
 

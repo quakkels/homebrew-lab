@@ -4,6 +4,8 @@
 - **Prerequisites:** [04 — Diodes & Rectification](04-diodes-and-rectification.md)
 - **Est. time:** ~75 min
 
+> **New to any symbol or term?** The wiring-diagram symbols, the unit abbreviations, and every piece of jargon used here are defined in the [glossary](../glossary.md) — no prior electronics knowledge assumed.
+
 ## Objective
 
 Use a transistor to let a tiny control signal switch a much larger current on and off. Do it with both a **BJT (2N3904)** and a **MOSFET (2N7000)**, compare how each is driven, and see the destructive inductive spike a coil makes — plus the one diode that tames it. This is the most software-intuitive use of a transistor and a direct prerequisite for the keyboard.
@@ -32,6 +34,8 @@ A **switch** in electronics doesn't have to be mechanical. A transistor lets a w
 R_B = (V_control − 0.7 V) / I_B
 ```
 
+where **R_B** = the base resistor value (ohms, Ω); **V_control** = the voltage of your on/off control signal (volts); **0.7 V** = the base-emitter turn-on drop; **I_B** = the base current you want to push in (amps). (Just above, **I_C** = collector current and **β (beta)** = the transistor's current gain.)
+
 Without that resistor, the base-emitter junction is just a forward diode and would draw destructive current.
 
 **MOSFET (voltage-controlled).** The 2N7000 turns on when the **gate-to-source voltage** exceeds its threshold (~2.1 V), and the gate draws essentially **no steady current** — it's a tiny capacitor. That's why modern digital and power design lives on MOSFETs: no base-current budget, very low on-resistance, less wasted heat. A pulldown resistor on the gate keeps it off when the control line floats.
@@ -50,6 +54,8 @@ Without that resistor, the base-emitter junction is just a forward diode and wou
                      E ── GND
    control ──[4.7kΩ]── B
    ```
+
+   *Diagram key:* `+5V` = positive supply; `──►|──`/`LED` = the light-emitting diode; `[330Ω]`/`[4.7kΩ]` = resistors; `(2N3904)` = the transistor, with `C`/`B`/`E` = its collector/base/emitter pins; `control` = your on/off signal; `GND` = ground. Symbols: [glossary](../glossary.md).
 
 2. Tie the control line to 5 V: the LED lights. Tie it to ground: the LED goes out.
 3. Measure **V_CE** (collector to emitter) with the LED on — it should be a fraction of a volt (`V_CE(sat)`), proving the transistor is fully on, not burning power.

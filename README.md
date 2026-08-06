@@ -26,6 +26,7 @@ Build the circuit, observe it on the scope, understand what you saw and why, the
 - **[`syllabus.md`](syllabus.md)** — the master plan: goals, pacing, equipment, the full module progression, and a reference library.
 - **[`experiments/`](experiments/)** — numbered experiment files (00–14), one per topic, from the RC time constant up through RF and embedded systems.
 - **[`projects/`](projects/)** — two flagship builds that branch off the modules: a **keyboard from scratch** and a **homebrew QMX+ transceiver**.
+- **[`glossary.md`](glossary.md)** — plain-language definitions of every symbol, unit, abbreviation, and jargon term, plus how to read the wiring diagrams. No prior electronics knowledge assumed.
 
 Start with [`syllabus.md`](syllabus.md), then [`experiments/00-bench-and-instrumentation.md`](experiments/00-bench-and-instrumentation.md).
 

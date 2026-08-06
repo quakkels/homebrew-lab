@@ -4,6 +4,8 @@
 - **Prerequisites:** [06 — Transistor as a Switch](06-transistor-as-switch.md)
 - **Est. time:** ~2–3 hours (spread over sessions)
 
+> **New to any symbol or term?** The wiring-diagram symbols, the unit abbreviations, and every piece of jargon used here are defined in the [glossary](../glossary.md) — no prior electronics knowledge assumed.
+
 ## Objective
 
 Cross from analog into the digital/embedded world you already know as a software engineer — but from the *hardware* side. See logic levels and contact bounce on the scope, understand pull-up resistors electrically, then get an RP2040 blinking an LED, reading a button, and scanning a diode key matrix. This is the on-ramp to the keyboard build.
@@ -46,6 +48,8 @@ Your code has always run on top of pins that are really just **voltages switched
 ### Part C — Blink and read (the embedded "hello world")
 
 5. Flash MicroPython (or the Arduino core) onto the Pico. Blink the onboard LED:
+
+   *Code note:* these snippets are **MicroPython** (Python that runs directly on the Pico). `Pin(25, …)` refers to a GPIO pin by its number; `#` begins a comment; `Pin.OUT`/`Pin.IN` set a pin as output/input; `Pin.PULL_UP` turns on the pin's internal pull-up resistor. Terms are in the [glossary](../glossary.md).
 
    ```python
    from machine import Pin

@@ -4,6 +4,8 @@
 - **Prerequisites:** [02 — RC Filters](02-rc-filters.md)
 - **Est. time:** ~60 min
 
+> **New to any symbol or term?** The wiring-diagram symbols, the unit abbreviations, and every piece of jargon used here are defined in the [glossary](../glossary.md) — no prior electronics knowledge assumed.
+
 ## Objective
 
 Meet the diode as a one-way valve for current, measure its forward voltage drop with your own meter, then use it to turn an AC sine wave into (pulsating, then smoothed) DC on the scope. This is the first genuinely *nonlinear* part in the course, and the front end of every power supply and every radio detector.
@@ -41,6 +43,8 @@ To smooth it, park a **reservoir capacitor** across the load. The cap charges up
 ΔV_ripple ≈ I_load / (f · C)          (half-wave)
 ```
 
+where **ΔV_ripple** = the peak-to-peak ripple voltage left over (the Greek Δ means "change in"); **I_load** = the current the load draws, in amps (A); **f** = the AC frequency, in hertz (Hz); **C** = the reservoir capacitance, in farads (F).
+
 Bigger cap or higher frequency → smaller ripple. This is literally Experiment 01's `τ = RC` again: the cap and load form an RC that must discharge *slowly* compared to the time between humps.
 
 ## Procedure
@@ -62,6 +66,8 @@ Bigger cap or higher frequency → smaller ripple. This is literally Experiment 
               │
              GND ── probe ground clip
    ```
+
+   *Diagram key:* `GEN` = the signal generator (the AC source); `──►|──` = the diode (current passes toward the band/cathode, here into the node); `[ 10kΩ ]` = the load resistor; `GND` = ground (0 V). Full symbol list in the [glossary](../glossary.md).
 
 5. Set the scope to show a couple of cycles. You should see **only the positive humps**, each starting about **0.6 V lower** than the input (the diode's toll). The negative half of the sine is simply gone.
 

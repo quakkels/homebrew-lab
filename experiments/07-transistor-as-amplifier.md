@@ -4,6 +4,8 @@
 - **Prerequisites:** [06 — Transistor as a Switch](06-transistor-as-switch.md)
 - **Est. time:** ~2 hours
 
+> **New to any symbol or term?** The wiring-diagram symbols, the unit abbreviations, and every piece of jargon used here are defined in the [glossary](../glossary.md) — no prior electronics knowledge assumed.
+
 ## Objective
 
 Bias a transistor into its *active* region — halfway on, not fully on or off — and get real voltage **gain**. Build a common-emitter amplifier, set its DC operating point with a multimeter, then measure its gain and watch it clip on the scope. This is the single biggest step in building analog intuition.
@@ -42,6 +44,8 @@ As a *switch* (Exp. 06) a transistor lives at the extremes — fully off or full
 
 That contrast — **stable-but-modest vs. high-but-touchy** — *is* the lesson. Feedback (the emitter resistor) is what buys predictability, and you're about to feel exactly what it costs and what it's worth.
 
+**Symbols used above:** **V_B / V_E / V_C** = the DC voltages at the transistor's base / emitter / collector; **R_C / R_E** = the collector / emitter resistors; **R1 / R2** = the two bias-divider resistors; **A_v** = voltage gain (output ÷ input; a minus sign means inverted); **r_e** = the transistor's tiny internal emitter resistance (≈ 26 mV ÷ I_C); **β (beta)** = its current gain; **I_C** = collector current.
+
 ## Procedure
 
 ### Part A — Set and verify the DC bias (no signal yet)
@@ -59,6 +63,8 @@ That contrast — **stable-but-modest vs. high-but-touchy** — *is* the lesson.
     GND               [10µF bypass] ── GND
    IN ──[1µF]──► V_B (base)
    ```
+
+   *Diagram key:* `+12V` = the positive supply; `[150k]`/`[22k]` = bias-divider resistors; `[4.7k]` = collector resistor (R_C); `[1kΩ]` = emitter resistor (R_E); `[1µF]`/`[10µF]` = capacitors; `(2N3904)` = the transistor with `C`/`B`/`E` pins; `V_B`/`V_C`/`V_E` = the voltages you'll measure; `IN`/`OUT` = signal in/out; `GND` = ground. Symbols: [glossary](../glossary.md).
 
 2. Power up with **no input signal**. Measure with the multimeter: `V_B ≈ 1.5 V`, `V_E ≈ 0.8 V`, `V_C ≈ 8 V`. If V_C is near 12 V the transistor is cut off; if near V_E it's saturated — re-check your divider. **Getting these three numbers right is 80% of the experiment.**
 

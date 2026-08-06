@@ -2,6 +2,8 @@
 
 - **Branches off:** Module 6 ([12 — LC Filters & Impedance Matching](../../experiments/12-lc-filters-and-impedance-matching.md), [13 — Mixers & Detectors](../../experiments/13-mixers-and-detectors.md)).
 
+> **New to any symbol or term?** Every abbreviation and piece of jargon is defined in the [glossary](../../glossary.md).
+
 ## Goal
 
 Build, align, and — most importantly — **understand** the **QRP Labs QMX+**. Not just "follow the manual and hope it works," but trace every block to the fundamentals you built up in the course, so you can test, debug, and eventually modify it.

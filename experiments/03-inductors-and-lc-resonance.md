@@ -4,6 +4,8 @@
 - **Prerequisites:** [02 — RC Filters](02-rc-filters.md)
 - **Est. time:** ~90 min
 
+> **New to any symbol or term?** The wiring-diagram symbols, the unit abbreviations, and every piece of jargon used here are defined in the [glossary](../glossary.md) — no prior electronics knowledge assumed.
+
 ## Objective
 
 Meet the inductor as the capacitor's mirror image, then combine L and C into a **resonant circuit** and watch it *ring* on the scope. You'll measure the ringing frequency and match it to
@@ -11,6 +13,8 @@ Meet the inductor as the capacitor's mirror image, then combine L and C into a *
 ```
 f₀ = 1 / (2π√(LC))
 ```
+
+where **f₀** = the resonant frequency, **L** = inductance, **C** = capacitance (each defined in full in the Background section below).
 
 using nothing more than your scope and its square-wave source. This one measurement is the seed of every filter, oscillator, and antenna match in radio.
 
@@ -37,11 +41,15 @@ using nothing more than your scope and its square-wave source. This one measurem
 capacitor:  i = C · dV/dt        inductor:  V = L · di/dt
 ```
 
+where **i** = current (amps, A); **V** = voltage (volts); **C** = capacitance (farads, F); **L** = inductance (henries, H); **dV/dt** and **di/dt** are shorthand for "how fast the voltage / current is changing." In words: the current into a capacitor depends on how fast its voltage changes; the voltage across an inductor depends on how fast its current changes.
+
 Everything you learned in Experiment 01 has a mirror image here. Where the RC circuit had `τ = RC`, the RL circuit has:
 
 ```
 τ = L / R
 ```
+
+where **τ (tau)** = the time constant, in seconds; **L** = inductance (H); **R** = resistance (Ω).
 
 **Reactance — the frequency-dependent "resistance."** A capacitor passes high frequencies easily (`X_C` falls as `f` rises); an inductor blocks them (`X_L` rises as `f` rises):
 
@@ -49,11 +57,15 @@ Everything you learned in Experiment 01 has a mirror image here. Where the RC ci
 X_L = 2πfL          X_C = 1 / (2πfC)
 ```
 
+where **X_L**, **X_C** = the inductor's and capacitor's **reactance** (their frequency-dependent opposition to AC), in ohms (Ω); **f** = frequency (Hz); **L** = inductance (H); **C** = capacitance (F); **π** ≈ 3.14159.
+
 Put an L and a C together and there is exactly one frequency where `X_L = X_C`. At that frequency they cancel, and the pair behaves in a dramatic way — it **resonates**. Setting `2πfL = 1/(2πfC)` and solving for `f` gives the single most important formula in radio:
 
 ```
 f₀ = 1 / (2π√(LC))
 ```
+
+where **f₀** = the resonant frequency, in hertz (Hz); **L** = inductance (H); **C** = capacitance (F); **√** = square root; **π** ≈ 3.14159.
 
 With **L = 1 mH** and **C = 10 nF**:
 
@@ -61,6 +73,8 @@ With **L = 1 mH** and **C = 10 nF**:
 √(LC) = √(1×10⁻³ × 10×10⁻⁹) = √(1×10⁻¹¹) ≈ 3.16×10⁻⁶
 f₀    = 1 / (2π × 3.16×10⁻⁶) ≈ 50.3 kHz     (period ≈ 19.9 µs)
 ```
+
+(This just plugs L = 1 mH and C = 10 nF into the formula above. The result, 50.3 kHz, is the frequency the tank rings at; its **period** — the time for one cycle — is 19.9 µs, or about 20 millionths of a second.)
 
 **Why it "rings."** If you hit an LC pair with a sudden voltage step, energy pours into the cap, then flows into the inductor, then back into the cap, and so on — a pendulum swinging between two forms of energy. On the scope you see a decaying sine wave at `f₀`. Each cycle loses a little energy to resistance, so the ringing dies out. **How slowly it dies is Q:** a high-Q tank rings for many cycles; a lossy one barely rings at all. This is *exactly* the mechanism a receiver uses to ring up on the station you want and ignore the rest.
 
@@ -77,6 +91,8 @@ f₀    = 1 / (2π × 3.16×10⁻⁶) ≈ 50.3 kHz     (period ≈ 19.9 µs)
                        │
                       GND ── probe ground clip
    ```
+
+   *Diagram key:* `CAL out` = the scope's square-wave calibration output (used here as the source); `[ 100Ω ]` = a 100-ohm resistor; `[ L 1mH ]` = a 1-millihenry inductor; `┬` = a junction; `GND` = ground. Full symbol list in the [glossary](../glossary.md).
 
 2. **Set the scope:** timebase ~5 µs/div, trigger on the rising edge. Expect `τ = L/R = 1×10⁻³ / 100 = 10 µs`.
 3. **Watch the current ramp.** At a voltage step the inductor initially blocks current (it hates sudden change), so the current — and the voltage across R — ramps up exponentially over ~5τ, then holds. It's Experiment 01's curve, driven by the *opposite* physical law.
@@ -95,6 +111,8 @@ f₀    = 1 / (2π × 3.16×10⁻⁶) ≈ 50.3 kHz     (period ≈ 19.9 µs)
                      GND ─────GND ── probe ground clip
    ```
 
+   *Diagram key:* `[ 1kΩ ]` = resistor; `[ L 1mH ]` = inductor; `[ C 10nF ]` = capacitor (the inductor and capacitor sit side by side = wired in parallel, forming the "tank"); `┬` = junction; `GND` = ground. Symbols: [glossary](../glossary.md).
+
    L and C are in parallel (a "tank"); the 1 kΩ feeds it from the square wave and keeps the source from swamping the ringing.
 5. **Set the scope:** timebase ~5 µs/div, trigger on the rising edge, and turn the volts/div up until you can see fine detail on each square-wave edge.
 6. **Find the ring.** On every edge of the square wave you should see a **decaying sine wave** — the tank ringing. If you don't see it, slow the source down or increase volts/div; the ring sits on top of each transition.
@@ -104,6 +122,8 @@ f₀    = 1 / (2π × 3.16×10⁻⁶) ≈ 50.3 kHz     (period ≈ 19.9 µs)
    ```
    Q ≈ π × N
    ```
+
+   where **Q** = the quality factor (higher = a sharper, longer-ringing resonance); **N** = the number of ring cycles you counted; **π** ≈ 3.14159.
 
    A clean 1 mH choke and a good cap will give you maybe N ≈ 3–10 cycles, i.e. Q ≈ 10–30.
 

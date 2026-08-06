@@ -4,6 +4,8 @@
 - **Prerequisites:** [07 — Transistor as an Amplifier](07-transistor-as-amplifier.md)
 - **Est. time:** ~90 min
 
+> **New to any symbol or term?** The wiring-diagram symbols, the unit abbreviations, and every piece of jargon used here are defined in the [glossary](../glossary.md) — no prior electronics knowledge assumed.
+
 ## Objective
 
 Get precise, predictable voltage gain set by just **two resistors** — the moment analog design stops being fiddly. Build inverting, non-inverting, and buffer configurations, measure their gain, and prove a buffer cures the "my circuit sags under load" problem you hit in Experiment 07.
@@ -29,6 +31,8 @@ Experiment 07 gave you gain, but it was a fussy business — bias points, β dri
 - **Non-inverting amp:** signal into **+**, feedback divider (R_f from output to **−**, R_in from **−** to ground). Gain `= 1 + R_f/R_in`.
 - **Inverting amp:** signal into **−** through R_in, feedback R_f from output to **−**, **+** tied to reference. Gain `= −R_f/R_in`. The **−** input sits at a "virtual" reference because the op-amp holds it equal to **+**.
 - **Buffer:** output tied straight back to **−**, signal into **+**. Gain = **1** — useless for size, invaluable because it presents a near-infinite input impedance and a near-zero output impedance. It *isolates* stages.
+
+In those formulas, **R_f** = the feedback resistor (from the output back to the **−** input); **R_in** = the input resistor; **+** and **−** are the op-amp's two inputs (non-inverting and inverting); "gain" is output voltage ÷ input voltage (a minus sign means the signal is also flipped upside-down).
 
 **Single-supply detail:** the LM358 runs fine on one 9 V rail, but then it can only output positive voltages. To handle an AC signal that swings both ways, we create a **virtual ground at half-supply (~4.5 V)** with a divider and reference the signal to that. (A ±supply avoids this, if you have one.)
 

@@ -4,6 +4,8 @@
 - **Prerequisites:** [04 — Diodes & Rectification](04-diodes-and-rectification.md)
 - **Est. time:** ~90 min
 
+> **New to any symbol or term?** The wiring-diagram symbols, the unit abbreviations, and every piece of jargon used here are defined in the [glossary](../glossary.md) — no prior electronics knowledge assumed.
+
 ## Objective
 
 Build the complete **rectify → smooth → regulate** chain and produce clean, stable 5 V DC from an AC source. Measure — with your own scope — how dramatically a regulator crushes ripple and holds the output steady as the load changes.
@@ -35,6 +37,8 @@ Experiment 04 got you bumpy DC with ripple. Real circuits need DC that is **flat
    ΔV_ripple ≈ I_load / (2 · f_line · C)
    ```
 
+   where **ΔV_ripple** = the leftover ripple voltage; **I_load** = the current the load draws (amps, A); **f_line** = the AC line frequency (hertz, e.g. 60); **C** = the reservoir capacitance (farads, F). The **× 2** is there because a bridge makes two humps per AC cycle (twice as many as half-wave), so the cap has half as long to sag.
+
 3. **Regulator (78L05)** — actively watches its own output and adjusts to hold it at exactly 5 V, absorbing the ripple and any load changes. It needs its input to stay a bit above 5 V at all times — the **dropout voltage** (~1.7 V for a 78L05, so keep the input above ~7 V even at the ripple *troughs*).
 4. **Decoupling caps** — small ceramics at the regulator's input and output (and later next to every chip) that supply fast current spikes the regulator can't react to quickly enough.
 
@@ -54,6 +58,8 @@ The magic number is **ripple rejection**: a 78L05 knocks ripple down by roughly 
    AC ──|◄──┴──|◄── AC
             −
    ```
+
+   *Diagram key:* the two `AC` corners connect to the AC adapter; `──►|──` and `──|◄──` are diodes (each triangle points the way it lets current flow, toward its bar/cathode); `+` and `−` are the DC output corners; `┬`/`┴` are junctions. Symbols: [glossary](../glossary.md).
 
 2. Put the **470 µF** across + and − (**+ lead to the + corner**). Probe + with the scope on **AC coupling** and measure the ripple. With `I` small and `f_line = 60 Hz` (→ 120 Hz full-wave), a light load gives a few hundred mV of sawtooth. Note the DC level too (DC coupling): roughly `V_peak − 1.4 V`.
 

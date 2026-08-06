@@ -4,6 +4,8 @@
 - **Prerequisites:** [08 — Op-Amp Fundamentals](08-op-amp-fundamentals.md)
 - **Est. time:** ~90 min
 
+> **New to any symbol or term?** The wiring-diagram symbols, the unit abbreviations, and every piece of jargon used here are defined in the [glossary](../glossary.md) — no prior electronics knowledge assumed.
+
 ## Objective
 
 Make a circuit generate its *own* signal instead of measuring an external one. Build a **555 astable** and an **op-amp relaxation oscillator**, predict each frequency from its R and C, and measure it. This is a real conceptual milestone: the circuit becomes a source.
@@ -31,6 +33,8 @@ Every clock, tone, carrier, and blink starts with an **oscillator** — a circui
 ```
 f = 1.44 / ((R1 + 2·R2) · C)
 ```
+
+where **f** = the output frequency (Hz); **R1**, **R2** = the two timing resistors (Ω); **C** = the timing capacitor (F); **1.44** is a constant baked into the 555's ⅓-to-⅔ thresholds. (Pin names in the steps below: **DIS** = discharge, **THR** = threshold, **TRIG** = trigger, **CTRL** = control, **RESET** = reset, **VCC** = +supply, **GND** = ground, **OUT** = output.)
 
 With `R1 = R2 = 4.7 kΩ` and `C = 100 nF`: `f = 1.44 / (14.1 kΩ · 100 nF) ≈ 1.0 kHz`. The duty cycle (fraction of time high) is `(R1 + R2)/(R1 + 2R2) ≈ 67%`, because charging goes through more resistance than discharging.
 

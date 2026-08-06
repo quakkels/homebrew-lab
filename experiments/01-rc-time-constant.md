@@ -4,6 +4,8 @@
 - **Prerequisites:** [00 — Bench & Instrumentation](00-bench-and-instrumentation.md)
 - **Est. time:** 45–60 min
 
+> **New to any symbol or term?** The wiring-diagram symbols, the unit abbreviations, and every piece of jargon used here are defined in the [glossary](../glossary.md) — no prior electronics knowledge assumed.
+
 ## Objective
 
 *See* a capacitor charge and discharge, and measure the time constant **τ = R × C** with your own cursors. This one node is the seed of filters, timing, decoupling, and impedance — everything downstream.
@@ -28,11 +30,15 @@ Charging a capacitor through a resistor is governed by:
 V(t) = V_final × (1 − e^(−t/τ)),   τ = R × C
 ```
 
+where **V(t)** = the capacitor's voltage at time *t*; **V_final** = the voltage it is heading toward; **e** = the mathematical constant ≈ 2.718 (the base of natural growth/decay); **τ (tau)** = the time constant, in seconds; **R** = resistance, in ohms (Ω); **C** = capacitance, in farads (F).
+
 At `t = τ`, the exponential has reached `1 − e^(−1) ≈ 0.632` — 63.2% of the way. That single number is how you'll *read* time constants off the screen for the rest of your life. With R = 10 kΩ and C = 10 nF:
 
 ```
 τ = 10,000 Ω × 10 × 10⁻⁹ F = 100 µs
 ```
+
+(10 kΩ = 10,000 ohms; 10 nF = 10 × 10⁻⁹ farads; the answer, 100 µs, is 100 microseconds — 100 millionths of a second.)
 
 ## Procedure
 
@@ -46,6 +52,13 @@ At `t = τ`, the exponential has reached `1 − e^(−1) ≈ 0.632` — 63.2% of
                        │
                       GND ── probe ground clip
    ```
+
+   **Reading this diagram** (the same symbols appear in every experiment — full list in the [glossary](../glossary.md)):
+   - `CAL out` — the scope's calibration output, a ~1 kHz square wave, used here as the test signal.
+   - `──` and `│` — wires; `┬` — a junction where wires connect.
+   - `[ 10kΩ ]` — a component drawn as a box with its value inside (here a 10 kilohm resistor); `[10nF]` is a 10 nanofarad capacitor.
+   - `GND` — ground, the circuit's 0-volt reference.
+   - "probe tip" / "probe ground clip" — where the two ends of the oscilloscope probe attach.
 
    Square wave → resistor → node → capacitor → ground. Probe the R/C node.
 3. **Set the scope:** timebase ~50 µs/div, adjust volts/div to fill the screen, trigger on the rising edge. You should see exponential curves instead of square edges.

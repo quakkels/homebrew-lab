@@ -4,6 +4,8 @@
 - **Prerequisites:** [08 — Op-Amp Fundamentals](08-op-amp-fundamentals.md), [02 — RC Filters](02-rc-filters.md)
 - **Est. time:** ~2 hours
 
+> **New to any symbol or term?** The wiring-diagram symbols, the unit abbreviations, and every piece of jargon used here are defined in the [glossary](../glossary.md) — no prior electronics knowledge assumed.
+
 ## Objective
 
 Combine op-amps with RC networks to build filters that have **gain** and **sharp, tunable** responses — no inductors required. Build a Sallen–Key low-pass, then a narrow audio **band-pass** centered on a CW pitch, and (optionally) hear a weak signal pop out of the noise.
@@ -32,6 +34,8 @@ A **filter** decides which frequencies to keep and which to throw away — and t
 f_c = 1 / (2π R C)
 ```
 
+where **f_c** = the cutoff frequency (Hz); **R** = resistance (Ω); **C** = capacitance (F); **π** ≈ 3.14159. (Further down: **Q** = quality factor — how sharp the filter is; **f₀** = the band-pass center frequency; **bandwidth** = how wide the passband is.)
+
 With `R = 16 kΩ`, `C = 10 nF`: `f_c ≈ 1/(2π·16k·10n) ≈ 1.0 kHz`. Below `f_c` the signal passes; above it, it falls off at 40 dB/decade (steeper than Exp. 02's 20).
 
 **Multiple-feedback band-pass.** For CW (Morse) you want to hear a *single audio tone* and reject everything else. A band-pass passes a narrow window around a center frequency `f₀` and its sharpness is set by **Q = f₀ / bandwidth**. A design centered near **700 Hz** with **Q ≈ 5** (so ~140 Hz wide) is a classic CW filter. Using both caps = 100 nF, the component set below lands right about there — and you'll *measure* how close.
@@ -52,6 +56,8 @@ With `R = 16 kΩ`, `C = 10 nF`: `f_c ≈ 1/(2π·16k·10n) ≈ 1.0 kHz`. Below `
                OUT (feedback to node A)
    ```
 
+   *Diagram key:* `IN`/`OUT` = signal in/out; `[16k]` = resistor, `[10n]` = capacitor; `(+)`/`(−)` = the op-amp's two inputs; the `\ > /` shape is the op-amp itself; `node A` is the junction between the two resistors; `ref` = the 4.5 V mid-rail reference. Symbols: [glossary](../glossary.md).
+
 2. **Sweep it.** Feed a constant-amplitude sine and step the frequency: 100 Hz, 300 Hz, 1 kHz, 3 kHz, 10 kHz. Record output amplitude at each.
 3. Find the **−3 dB point** (output at 0.707 of the passband level). It should land near **1 kHz**. Above it, note how much faster it falls than your Exp. 02 RC — that's second-order steepness.
 
@@ -67,7 +73,7 @@ With `R = 16 kΩ`, `C = 10 nF`: `f_c ≈ 1/(2π·16k·10n) ≈ 1.0 kHz`. Below `
                ref          (+ to 4.5V ref)
    ```
 
-   (R1 sets input level, R2 the feedback/Q, R3 tunes f₀.)
+   *Diagram key:* `IN`/`OUT` = signal in/out; `[R1 11k]`/`[R2 22k]`/`[R3 220Ω]` = resistors; `[C1 100n]`/`[C2 100n]` = capacitors; `(−)`/`(+)` = the op-amp's inputs; `ref` = the 4.5 V mid-rail reference. Within the circuit, R1 sets the input level, R2 sets the feedback/Q, and R3 tunes f₀. Symbols: [glossary](../glossary.md).
 5. **Sweep 100 Hz → 3 kHz.** Find the peak frequency `f₀` (expect ~700 Hz) and the two **−3 dB** frequencies on either side. Compute `Q = f₀ / (f_high − f_low)` — you're aiming for ~5.
 6. Listen to the resonance: the passband is narrow enough that as you sweep, the output rises and falls sharply around 700 Hz.
 
