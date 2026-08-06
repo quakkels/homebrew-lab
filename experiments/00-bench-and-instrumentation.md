@@ -21,9 +21,20 @@ Get the workspace and instruments ready to *learn* — not just to build. By the
 
 - [ ] Stable place for the scope where you can see it while your hands are on the breadboard.
 - [ ] Good light and, ideally, a magnifier for small parts.
-- [ ] Soldering iron with a clean, tinned tip; the QMX+ has a lot of toroids to wind.
-- [ ] Anti-static habit if you're handling the QMX+'s STM32 / MOSFETs.
+- [ ] Soldering iron with a clean, tinned tip.
 - [ ] A notebook or the **Log** sections in these files for recording results.
+
+## A note about static
+
+Static electricity — the same zap you get off a doorknob — can carry thousands of volts. It's harmless to you, but it can silently damage or weaken sensitive parts, especially MOS-based devices (microcontrollers, MOSFETs, many ICs). The damage is often not dramatic: a part can be degraded rather than killed outright, then fail unpredictably later. Plain resistors, capacitors, and most through-hole discretes don't care — so this mainly matters when you handle boards with microcontrollers or bare MOSFETs.
+
+You don't need a lab's worth of gear. The common approaches, from simplest to most thorough:
+
+- **Touch ground first.** Before picking up a sensitive board or chip, touch a large grounded metal object to bleed off your charge. Cheap and surprisingly effective.
+- **Anti-static bags and foam.** Keep sensitive parts in their pink/silver anti-static bags, or press their pins into conductive foam, until you install them.
+- **A grounding wrist strap.** Worn on your wrist and connected (through a built-in resistor) to ground, it keeps you continuously at ground potential. The standard cheap upgrade.
+- **An anti-static mat.** A grounded work-surface mat is the bench-wide version; pair it with a wrist strap for the most thorough protection.
+- **Mind the environment.** Dry air and carpet make static worse; humidity and hard floors make it better. Avoid shuffling across carpet right before handling delicate parts.
 
 ## Instrument warm-up (do this once)
 
