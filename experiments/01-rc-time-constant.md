@@ -40,6 +40,15 @@ At `t = τ`, the exponential has reached `1 − e^(−1) ≈ 0.632` — 63.2% of
 
 (10 kΩ = 10,000 ohms; 10 nF = 10 × 10⁻⁹ farads; the answer, 100 µs, is 100 microseconds — 100 millionths of a second.)
 
+**Why the time constant matters.** τ is the single number that tells you *how fast a circuit responds to change*, and almost everything built from resistors and capacitors is governed by it. A large τ means the circuit reacts slowly and smooths things out; a small τ means it reacts quickly and lets sharp changes through. That one idea reappears constantly:
+
+- **Timing and delays** — a capacitor charging through a resistor toward a threshold sets the interval in a 555 timer, a power-on delay, or the pause that "debounces" a switch (Exp. 10 and 14).
+- **Filtering** — the very same τ *is* a filter's cutoff frequency (`f_c = 1 / (2πτ)`), deciding which frequencies pass and which are blocked. That's the whole of Exp. 02.
+- **Smoothing and decoupling** — a large τ lets a capacitor hold a voltage up between "refills," which is how a power supply removes ripple and how the decoupling cap next to a chip steadies its supply (Exp. 04 and 05).
+- **Signal shape and speed limits** — τ sets how fast an edge can rise or fall; in digital circuits the unavoidable stray resistance and capacitance form an RC that caps how fast a wire can switch — a real ceiling on clock speeds.
+
+In short, learning to *see* and predict τ here is learning the pace at which all of analog electronics happens.
+
 ## Procedure
 
 1. **Confirm the source.** Probe the probe-comp output directly; verify a clean square wave and note its frequency/amplitude (from Experiment 00).

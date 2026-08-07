@@ -53,11 +53,20 @@ Every session carries overhead — set up, re-orient, tear down, write the log �
 
 ## Equipment
 
-**Have:** oscilloscope (probes compensated), multimeter, breadboard, soldering iron, and a **QRP Labs QMX+** kit.
+**Need:**
 
-**Need (starter passives kit, ~$20):** assorted 1/4 W resistors, ceramic + electrolytic capacitors, common diodes (1N4148, 1N4007), a few LEDs, an assortment of NPN transistors (2N3904) and an N-channel MOSFET (2N7000), an LM358 op-amp, an NE555, and a handful of inductors. Detailed bill of materials lives in [`experiments/00-bench-and-instrumentation.md`](experiments/00-bench-and-instrumentation.md).
+- An **oscilloscope** (with compensated probes) — the core learning instrument.
+- A **multimeter**.
+- A **breadboard** with hookup wire, and a **soldering iron**.
+- A **QRP Labs QMX+** kit — for the radio project track.
+- A **starter passives kit (~$20)** — resistors, capacitors, diodes, transistors, and a few common ICs — or just buy the components as each experiment calls for them. The detailed bill of materials lives in [`experiments/00-bench-and-instrumentation.md`](experiments/00-bench-and-instrumentation.md).
 
-**Nice to have later:** bench power supply, function/signal generator (a cheap DDS module or the AD9833 is fine), an LC meter, and a **NanoVNA** — superb for the RF modules and for aligning/characterizing the QMX+ filters (and you'll appreciate it as a ham).
+**Nice to have (later):**
+
+- A **bench power supply**.
+- A **function/signal generator** (a cheap DDS module or the AD9833 is fine).
+- An **LC meter**.
+- A **NanoVNA** — superb for the RF modules and for aligning/characterizing the QMX+ filters (and you'll appreciate it as a ham).
 
 ## The progression
 

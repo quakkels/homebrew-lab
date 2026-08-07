@@ -25,7 +25,21 @@ Take the *exact same* RC circuit from Experiment 01 and view it in the **frequen
 
 ## Background (the why)
 
-From Experiment 01, `τ = RC = 100 µs`. The cutoff is:
+**What a filter is.** A filter is a circuit that lets some frequencies through while weakening ("attenuating") others — it sorts a signal by frequency. Filters are named by *which* frequencies they keep:
+
+- A **low-pass** filter passes frequencies *below* a chosen **cutoff** and weakens everything above it — it lets the *low* frequencies pass.
+- A **high-pass** filter is the mirror image: it passes frequencies *above* the cutoff and weakens everything below it.
+
+The **cutoff frequency** is simply the dividing line between "passed" and "blocked."
+
+**What they're for.** Choosing which frequencies to keep and which to discard turns out to be most of what signal processing is:
+
+- **Audio** — sending bass to a subwoofer (low-pass) and treble to a tweeter (high-pass); the tone and EQ controls on any stereo.
+- **Cleaning up a signal** — a low-pass smooths away high-frequency noise; a high-pass strips off an unwanted DC level or low-frequency rumble so only the wanted wiggle is left.
+- **Radio** — keeping the band you want and rejecting the rest, and removing junk before it reaches a receiver or leaves a transmitter (you'll build the sharp radio-grade versions in Exp. 12).
+- **Interfacing stages** — "coupling" a signal from one circuit to the next while blocking their different DC levels (a high-pass), or smoothing a supply (a low-pass).
+
+Here's the payoff that ties this back to Exp. 01: the cutoff frequency is set by the *same RC time constant* you already measured. From Experiment 01, `τ = RC = 100 µs`. The cutoff is:
 
 ```
 f_c = 1 / (2π × τ) = 1 / (2π × 100 µs) ≈ 1592 Hz
