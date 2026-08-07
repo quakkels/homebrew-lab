@@ -35,6 +35,8 @@ using nothing more than your scope and its square-wave source. This one measurem
 
 ## Background (the why)
 
+**Is resonance good or bad? Mostly, it's the most useful effect in all of radio.** Resonance is what happens when an inductor and a capacitor are tuned to the same frequency and hand energy back and forth between them — and the result is that the circuit develops a strong *preference* for that one frequency. That preference is precisely what you want whenever you need to *select* a signal: it's how a radio picks one station out of thousands, how a filter keeps one band and rejects the rest, how an antenna is tuned, and how an oscillator decides which frequency to run at. So throughout this course resonance is a tool you reach for **on purpose**. It does have a mischievous side — *unwanted* resonance shows up as "ringing" on a fast edge, or as a circuit that breaks into oscillation when you didn't ask it to — but that is the same effect simply happening in the wrong place, and knowing how it works is exactly how you tame it. Either way, to build resonance and see it on the scope you first need its second ingredient — the inductor — so we start there.
+
 **The inductor is the capacitor turned inside out.** A capacitor stores energy in an electric field and fights changes in *voltage*. An inductor stores energy in a magnetic field and fights changes in *current*:
 
 ```
