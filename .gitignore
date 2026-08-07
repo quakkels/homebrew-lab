@@ -3,5 +3,7 @@
 *.odt
 
 # Office lock / temp files
-.~lock.*#      # LibreOffice lock files
-~$*            # Microsoft Word owner/temp files
+# LibreOffice lock files, e.g. .~lock.Homebrew-Lab.docx#
+.~lock.*#
+# Microsoft Word owner/temp files, e.g. ~$Homebrew-Lab.docx
+~$*

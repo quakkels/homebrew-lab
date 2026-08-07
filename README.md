@@ -30,6 +30,19 @@ Build the circuit, observe it on the scope, understand what you saw and why, the
 
 Start with [`syllabus.md`](syllabus.md), then [`experiments/00-bench-and-instrumentation.md`](experiments/00-bench-and-instrumentation.md).
 
+## Printing a bench copy
+
+To keep a physical copy on the bench, [`scripts/build-print.sh`](scripts/build-print.sh) combines the whole course into a single Word/LibreOffice document — a title page, a table of contents, and each file as a chapter with page breaks between them (syllabus → experiments → project briefs → glossary appendix).
+
+```sh
+./scripts/build-print.sh              # -> Homebrew-Lab.docx (default)
+./scripts/build-print.sh my-copy.odt  # native LibreOffice .odt
+```
+
+Re-run it any time the curriculum changes; the experiment files are auto-discovered in numeric order, so new experiments are included automatically. It requires [pandoc](https://pandoc.org) (the `.odt` option also needs LibreOffice). A `.docx` opens and prints from both Microsoft Word and LibreOffice, which is why it's the default. The generated documents are git-ignored — the markdown stays the single source of truth.
+
+Body text is 10pt and pages are numbered in the footer. The table of contents fills in when you open the file — Word updates it automatically; in LibreOffice, if it looks blank, choose **Tools ▸ Update ▸ Update All** (or select all and press F9).
+
 ## Safety
 
 Some modules involve mains-adjacent power supplies and RF transmission. Transmit only into a dummy load during testing, radiate only on frequencies and at power levels your license authorizes, and observe ESD precautions around sensitive parts. When in doubt, check a trusted reference — see the AI-generated caveat above.
