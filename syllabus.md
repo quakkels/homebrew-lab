@@ -2,13 +2,13 @@
 
 A self-directed, bench-driven course in electronics, built around one idea: **you learn analog by *seeing* it on a scope.** Every experiment ends with a measurement you make yourself and a number that matches (or surprises) the theory.
 
-## Who this is for (me)
+## Who this is for
 
 - Software engineer — digital logic and microcontrollers will come easily.
 - Amateur radio operator, US General class — already fluent in some RF concepts (frequency, resonance, antennas, transmission lines).
-- Has built breadboard circuits and soldered perf boards; built antennas.
-- Owns a **QRP Labs QMX+** transceiver kit (the flagship radio build).
-- **The real gap to close:** *analog intuition* — component feel, reading signals on a scope, and the connective tissue (filters, impedance, biasing) between "I can follow a schematic" and "I can design one."
+- May have experience building breadboard circuits and soldered perf boards.
+- Wants to build a HAM tranceiver. (QMX+ will be this curriculumn's flagship radio build).
+- Desires to develop *analog intuition* — component feel, reading signals on a scope, and the connective tissue (filters, impedance, biasing.) This will fill the gap between "I can follow a schematic" and "I can design one."
 
 ## Goals this curriculum serves
 
