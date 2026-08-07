@@ -1,0 +1,7 @@
+# Generated printable documents (rebuild with scripts/build-print.sh)
+*.docx
+*.odt
+
+# Office lock / temp files
+.~lock.*#      # LibreOffice lock files
+~$*            # Microsoft Word owner/temp files
