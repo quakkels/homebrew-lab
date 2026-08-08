@@ -7,7 +7,7 @@ A self-directed, bench-driven course in electronics, built around one idea: **yo
 - Software engineer — digital logic and microcontrollers will come easily.
 - Amateur radio operator, US General class — already fluent in some RF concepts (frequency, resonance, antennas, transmission lines).
 - May have experience building breadboard circuits and soldered perf boards.
-- Wants to build a HAM tranceiver. (QMX+ will be this curriculumn's flagship radio build).
+- Wants to build a HAM tranceiver. (QMX+ will be this curriculum's flagship radio build).
 - Desires to develop *analog intuition* — component feel, reading signals on a scope, and the connective tissue (filters, impedance, biasing.) This will fill the gap between "I can follow a schematic" and "I can design one."
 
 ## Goals this curriculum serves
