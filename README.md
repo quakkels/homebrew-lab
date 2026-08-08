@@ -32,14 +32,22 @@ Start with [`syllabus.md`](syllabus.md), then [`experiments/00-bench-and-instrum
 
 ## Printing a bench copy
 
-To keep a physical copy on the bench, [`scripts/build-print.sh`](scripts/build-print.sh) combines the whole course into a single Word/LibreOffice document — a title page, a table of contents, and each file as a chapter with page breaks between them (syllabus → experiments → project briefs → glossary appendix).
+To keep a physical copy on the bench, [`scripts/build_print.py`](scripts/build_print.py) combines the whole course into a single Word/LibreOffice document — a title page, a table of contents, and each file as a chapter with page breaks between them (syllabus → experiments → project briefs → glossary appendix).
 
 ```sh
-./scripts/build-print.sh              # -> Homebrew-Lab.docx (default)
-./scripts/build-print.sh my-copy.odt  # native LibreOffice .odt
+python3 scripts/build_print.py                # -> Homebrew-Lab.docx (default)
+python3 scripts/build_print.py my-copy.odt    # native LibreOffice .odt
 ```
 
-Re-run it any time the curriculum changes; the experiment files are auto-discovered in numeric order, so new experiments are included automatically. It requires [pandoc](https://pandoc.org) (the `.odt` option also needs LibreOffice). A `.docx` opens and prints from both Microsoft Word and LibreOffice, which is why it's the default. The generated documents are git-ignored — the markdown stays the single source of truth.
+(On Windows, use `py scripts\build_print.py`.) Re-run it any time the curriculum changes; the experiment files are auto-discovered in numeric order, so new experiments are included automatically. A `.docx` opens and prints from both Microsoft Word and LibreOffice, which is why it's the default. The generated documents are git-ignored — the markdown stays the single source of truth.
+
+**Dependencies:**
+
+- **Python 3** — required; runs the build and does the document post-processing (footer, page numbers, 10pt). Standard library only; no `pip install` needed.
+- **[pandoc](https://pandoc.org)** — required; does the markdown → document conversion. Called as a subprocess, so it just needs to be on your `PATH`.
+- **LibreOffice** (`soffice`) — only needed for `.odt` output; not used for the default `.docx`.
+
+The script is pure Python, so it runs on **Windows, macOS, and Linux**. Installs: Debian/Ubuntu `sudo apt install pandoc python3`; macOS `brew install pandoc` (Python 3 is already present); Windows `winget install JohnMacFarlane.Pandoc` plus Python from python.org. Add LibreOffice only if you want `.odt`.
 
 Body text is 10pt and pages are numbered in the footer. The table of contents fills in when you open the file — Word updates it automatically; in LibreOffice, if it looks blank, choose **Tools ▸ Update ▸ Update All** (or select all and press F9).
 

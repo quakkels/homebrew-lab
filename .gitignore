@@ -1,4 +1,4 @@
-# Generated printable documents (rebuild with scripts/build-print.sh)
+# Generated printable documents (rebuild with scripts/build_print.py)
 *.docx
 *.odt
 
@@ -7,3 +7,7 @@
 .~lock.*#
 # Microsoft Word owner/temp files, e.g. ~$Homebrew-Lab.docx
 ~$*
+
+# Python bytecode cache
+__pycache__/
+*.pyc
